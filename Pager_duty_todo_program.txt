@@ -1,0 +1,126 @@
+Pager Duty Interview:
+
+1. Install Mysql
+2. Install Workbench for user Interface
+3. Create database:
+4. Create table item under todo
+
+Create database todo;
+
+use todo;
+
+Create table item (
+itemId 	int NOT NULL AUTO_INCREMENT  PRIMARY KEY,
+itemDesc   varchar(250),
+itemPrice   float(10,2),
+createdDate  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+updatedDate  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+status       varchar(10));
+
+Insert data into Item:
+=====================
+
+INSERT INTO `todo`.`item`
+(
+`itemDesc`,
+`itemPrice`,
+`status`)
+VALUES
+('Magic Light'
+12.50,
+'Active');
+
+Write a Python Program to create simple app for 1. Adding, 2. Deleting, 3. Updating and 4. Displaying records
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '<password>';
+
+Program : todo_program.py
+
+How to run it:
+
+
+sarbamasmacbook:todo Sarbamangal$ python todo_program.py
+
+    1.Add a Todo
+    2.Delete a Todo
+    3.Display All Todo  Records
+    4.Display One  Todo  Recordxs
+    5.Update a Todo
+    6.Exit/Quit
+
+What would you like to do? 1
+Enter Item Description: Iphone 6
+Enter Item Price: 800
+Enter Item Status: Active
+(1, 'record inserted.')
+
+ Todo Added.
+
+    1.Add a Todo
+    2.Delete a Todo
+    3.Display All Todo  Records
+    4.Display One  Todo  Recordxs
+    5.Update a Todo
+    6.Exit/Quit
+
+What would you like to do? 3
+(7, 'record selected.')
+(2, u'Bright Light', 13.2, datetime.datetime(2018, 9, 28, 20, 47, 41), datetime.datetime(2018, 9, 28, 20, 47, 41), u'Active')
+(4, u'Pine Tree', 150.6, datetime.datetime(2018, 10, 3, 22, 7, 57), datetime.datetime(2018, 10, 3, 22, 7, 57), None)
+(5, u'Pine Tree', 150.6, datetime.datetime(2018, 10, 4, 11, 42, 17), datetime.datetime(2018, 10, 4, 11, 42, 17), None)
+(6, u'Pine Tree', 150.6, datetime.datetime(2018, 10, 4, 11, 42, 26), datetime.datetime(2018, 10, 4, 11, 42, 26), None)
+(7, u'iphone', 150.89, datetime.datetime(2018, 10, 4, 11, 54, 10), datetime.datetime(2018, 10, 4, 11, 54, 10), u'Active')
+(8, u'Iphone-10', 1000.0, datetime.datetime(2018, 10, 4, 12, 6, 43), datetime.datetime(2018, 10, 4, 12, 6, 43), u'Active')
+(9, u'Iphone 6', 800.0, datetime.datetime(2018, 10, 4, 12, 34, 9), datetime.datetime(2018, 10, 4, 12, 34, 9), u'Active')
+
+    1.Add a Todo
+    2.Delete a Todo
+    3.Display All Todo  Records
+    4.Display One  Todo  Recordxs
+    5.Update a Todo
+    6.Exit/Quit
+
+What would you like to do? 2
+Enter Item which you want to delete: 9
+(1, 'record deleted.')
+
+    1.Add a Todo
+    2.Delete a Todo
+    3.Display All Todo  Records
+    4.Display One  Todo  Recordxs
+    5.Update a Todo
+    6.Exit/Quit
+
+What would you like to do? 3
+(6, 'record selected.')
+(2, u'Bright Light', 13.2, datetime.datetime(2018, 9, 28, 20, 47, 41), datetime.datetime(2018, 9, 28, 20, 47, 41), u'Active')
+(4, u'Pine Tree', 150.6, datetime.datetime(2018, 10, 3, 22, 7, 57), datetime.datetime(2018, 10, 3, 22, 7, 57), None)
+(5, u'Pine Tree', 150.6, datetime.datetime(2018, 10, 4, 11, 42, 17), datetime.datetime(2018, 10, 4, 11, 42, 17), None)
+(6, u'Pine Tree', 150.6, datetime.datetime(2018, 10, 4, 11, 42, 26), datetime.datetime(2018, 10, 4, 11, 42, 26), None)
+(7, u'iphone', 150.89, datetime.datetime(2018, 10, 4, 11, 54, 10), datetime.datetime(2018, 10, 4, 11, 54, 10), u'Active')
+(8, u'Iphone-10', 1000.0, datetime.datetime(2018, 10, 4, 12, 6, 43), datetime.datetime(2018, 10, 4, 12, 6, 43), u'Active')
+
+    1.Add a Todo
+    2.Delete a Todo
+    3.Display All Todo  Records
+    4.Display One  Todo  Recordxs
+    5.Update a Todo
+    6.Exit/Quit
+
+What would you like to do? 4
+Enter Item Id: 8
+(8, u'Iphone-10', 1000.0, datetime.datetime(2018, 10, 4, 12, 6, 43), datetime.datetime(2018, 10, 4, 12, 6, 43), u'Active')
+(1, 'record selected.')
+
+    1.Add a Todo
+    2.Delete a Todo
+    3.Display All Todo  Records
+    4.Display One  Todo  Recordxs
+    5.Update a Todo
+    6.Exit/Quit
+
+What would you like to do? 6
+
+ Goodbye
+sarbamasmacbook:todo Sarbamangal$
+
